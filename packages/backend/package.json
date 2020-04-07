@@ -1,0 +1,39 @@
+{
+  "name": "@notes/backend",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Pavel Lagoda <pasha.lagoda@gmail.com>",
+  "homepage": "",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "directories": {
+    "dist": "./dist"
+  },
+  "files": [
+    "./dist"
+  ],
+  "scripts": {
+    "start": "nodemon 'src/index.ts' --exec 'ts-node' src/index.ts -e ts,json",
+    "build": "tsc -b",
+    "clean": "rimraf ./dist",
+    "lint": "tsc --noEmit && eslint */**/*.ts",
+    "lint:fix": "yarn lint --fix",
+    "test": "jest --colors"
+  },
+  "dependencies": {
+    "@notes/common": "^0.0.0",
+    "bignumber.js": "^9.0.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.2",
+    "@types/jest": "^25.1.4",
+    "husky": "^4.2.3",
+    "jest": "^25.1.0",
+    "lint-staged": "^10.0.8",
+    "nodemon": "^2.0.2",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^25.2.1",
+    "ts-node": "^8.6.2"
+  }
+}
